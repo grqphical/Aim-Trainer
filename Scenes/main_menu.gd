@@ -8,9 +8,9 @@ func reset_high_score():
     high_score_file.store_line("0")
 
 func change_scene():
-    get_tree().change_scene_to_file("res://scenes/main.tscn")
+    get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 
 func view_manual() -> void:
-   get_tree().change_scene_to_file("res://scenes/how_to.tscn")
+   get_tree().change_scene_to_file("res://Scenes/how_to.tscn")
 
