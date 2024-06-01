@@ -68,9 +68,24 @@ offset_right = 90.0
 offset_bottom = 86.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Reset High Score"
+text = "Manual"
 
 [node name="Play3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 177.0
+offset_right = 90.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Source Code"
+
+[node name="Play4" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -83,7 +98,7 @@ offset_right = 90.0
 offset_bottom = 152.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Source Code"
+text = "Reset High Score"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
@@ -108,5 +123,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1280, 720)
 
 [connection signal="pressed" from="Play" to="." method="change_scene"]
-[connection signal="pressed" from="Play2" to="." method="reset_high_score"]
+[connection signal="pressed" from="Play2" to="." method="view_manual"]
 [connection signal="pressed" from="Play3" to="." method="view_source_code"]
+[connection signal="pressed" from="Play4" to="." method="reset_high_score"]

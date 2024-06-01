@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1phoh7kdl7hl"]
+
+[ext_resource type="Script" path="res://Scenes/how_to.gd" id="1_cqs14"]
+[ext_resource type="Texture2D" uid="uid://b7gw7j2xwpoak" path="res://Sprinkle.svg" id="1_paa6l"]
+
+[node name="HowTo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cqs14")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("1_paa6l")
+region_enabled = true
+region_rect = Rect2(0, 0, 1280, 720)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 25.0
+offset_right = 46.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "How to Play"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.0
+offset_top = 125.0
+offset_right = 316.0
+offset_bottom = 344.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Simply click the coloured dots that appear
+Red ones give you 1 point
+Yellow ones give you 5, but are harder to click
+
+Every 10 points, the speed at which the targets appear
+and disappear increases slightly."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -322.0
+offset_right = 70.0
+offset_bottom = -282.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Go Back"
+
+[connection signal="pressed" from="Button" to="." method="back_to_menu"]
