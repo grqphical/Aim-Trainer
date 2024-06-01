@@ -1,7 +1,7 @@
 extends Control
 
 func view_source_code():
-    OS.shell_open("https://github.com/grqphical")
+    OS.shell_open("https://github.com/grqphical/Aim-Trainer")
 
 func reset_high_score():
     var high_score_file = FileAccess.open("user://highscore.save", FileAccess.WRITE)
