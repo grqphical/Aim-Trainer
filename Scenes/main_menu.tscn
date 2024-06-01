@@ -117,9 +117,8 @@ text = "Made by grqphical"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(640, 360)
+position = Vector2(960, 540)
 texture = ExtResource("2_sk82a")
-region_enabled = true
 region_rect = Rect2(0, 0, 1280, 720)
 
 [connection signal="pressed" from="Play" to="." method="change_scene"]
