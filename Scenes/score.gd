@@ -28,6 +28,6 @@ func change_score(score_value: int):
     label.text = str(score)
 
     if score > high_score:
-        high_score += 1
+        high_score += score_value
         high_score_label.text = "High Score: " + str(high_score)
         save_high_score()

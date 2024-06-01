@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvq0b4epmf7jv"]
+[gd_scene load_steps=5 format=3 uid="uid://dvq0b4epmf7jv"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_bbdfm"]
 [ext_resource type="PackedScene" uid="uid://82n1gkjlwj48" path="res://Scenes/target.tscn" id="2_x53pt"]
 [ext_resource type="PackedScene" uid="uid://dhmij8yiqly1e" path="res://Scenes/score.tscn" id="3_cthgc"]
+[ext_resource type="Texture2D" uid="uid://b7gw7j2xwpoak" path="res://Sprinkle.svg" id="4_yacsq"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_bbdfm")
@@ -14,5 +15,11 @@ offset_bottom = -319.0
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Timer"]
+z_index = -1
+texture = ExtResource("4_yacsq")
+region_enabled = true
+region_rect = Rect2(0, 0, 1280, 720)
 
 [node name="Camera2D" type="Camera2D" parent="."]
